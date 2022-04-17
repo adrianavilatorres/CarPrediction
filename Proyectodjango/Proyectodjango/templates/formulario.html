@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+        body {
+            /* The image used */
+            background-image: url("car.jpg");
+        }
+        
+        .contenedor {
+            text-align: center;
+        }
+        
+        .formulario {
+            background-image: url('../templates/car.jpg');
+            background-color: #cccccc;
+            padding: 10px;
+            margin: 10px;
+            /* IMPORTANTE */
+            display: inline-block;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="formulario">
+            <h1>Calcula el precio de tu coche</h1>
+
+            <form action="/respuesta/" method="GET">
+
+                <p>Tipo de combustible</p>
+                <select name="fuelType">
+                    <option value="2">Gasolina</option>
+                    <option value="1">Diesel</option>
+                    <option value="4">Hibrido</option>
+                    <option value="7">Gas natural (CNG)</option>
+                    <option value="3">Electrico</option>
+                    <option value="5">Hibrido enchufable</option>
+                    <option value="6">Gas licuado (GLP)</option>
+                </select>
+
+                <p>Kilómetros</p>
+                <input type="number" name="km">
+
+
+                <p>Marca</p>
+                <select name="Marca">
+                    <option value="46">TOYOTA</option>
+                    <option value="48">VOLVO</option>
+                    <option value="7">BMW</option>
+                    <option value="15">FORD</option>
+                    <option value="28">MERCEDES-BENZ</option>
+                    <option value="14">FIAT</option>
+                    <option value="222">MINI</option>
+                    <option value="1400">CUPRA</option>
+                    <option value="35">RENAULT</option>
+                    <option value="33">PEUGEOT</option>
+                    <option value="39">SEAT</option>
+                    <option value="11">CITROEN</option>
+                    <option value="47">VOLKSWAGEN</option>
+                    <option value="32">OPEL</option>
+                    <option value="31">NISSAN</option>
+                    <option value="40">SKODA</option>
+                    <option value="4">AUDI</option>
+                    <option value="34">PORSCHE</option>
+                    <option value="69">HONDA</option>
+                    <option value="27">MAZDA</option>
+                    <option value="18">HYUNDAI</option>
+                    <option value="30">MITSUBISHI</option>
+                    <option value="1330">ABARTH</option>
+                    <option value="24">LAND-ROVER</option>
+                    <option value="25">LEXUS</option>
+                    <option value="41">SMART</option>
+                    <option value="26">MASERATI</option>
+                    <option value="20">JAGUAR</option>
+                    <option value="1358">DS</option>
+                    <option value="22">KIA</option>
+                    <option value="1">ALFA ROMEO</option>
+                    <option value="1354">TESLA</option>
+                    <option value="21">JEEP</option>
+                    <option value="42">SSANGYONG</option>
+                    <option value="1011">DACIA</option>
+                    <option value="9">CHEVROLET</option>
+                </select>
+
+                <p>Modelo</p>
+                <select name="Modelo">
+                    <option value='322.0'>Yaris</option>
+                    <option value='285.0'>V40</option>
+                    <option value='70.0'>Serie 3</option>
+                    <option value='39.0'>Mondeo</option>
+                    <option value='8.0'>Clase C</option>
+                    <option value='598.0'>500</option>
+                    <option value='449.0'>MINI</option>
+                    <option value='1176.0'>Clase SLC</option>
+                    <option value='1258.0'>Ateca</option>
+                    <option value='153.0'>Espace</option>
+                    <option value='950.0'>5008</option>
+                    <option value='1182.0'>Arona</option>
+                    <option value='1231.0'>3008</option>
+                    <option value='934.0'>C4 Cactus</option>
+                    <option value='1118.0'>308</option>
+                    <option value='447.0'>Touran</option>
+                    <option value='462.0'>Grandland X</option>
+                    <option value='1228.0'>JUKE</option>
+                    <option value='976.0'>Octavia</option>
+                    <option value='350.0'>Q3</option>
+                    <option value='999.0'>Serie 4</option>
+                    <option value='1084.0'>Panamera</option>
+                    <option value='936.0'>HRV</option>
+                    <option value='401.0'>Tiguan</option>
+                    <option value='628.0'>Caravelle</option>
+                    <option value='609.0'>Serie 1</option>
+                    <option value='539.0'>Kuga</option>
+                    <option value='882.0'>C5 Aircross</option>
+                    <option value='1260.0'>Mustang</option>
+                    <option value='1130.0'>X3</option>
+                    <option value='515.0'>500X</option>
+                    <option value='1138.0'>Countryman</option>
+                    <option value='971.0'>Megane</option>
+                    <option value='17.0'>C3</option>
+                    <option value='485.0'>208</option>
+                    <option value='1021.0'>Arteon</option>
+                    <option value='1220.0'>Mazda3</option>
+                    <option value='287.0'>i3</option>
+                    <option value='1056.0'>Pathfinder</option>
+                    <option value='396.0'>Insignia</option>
+                    <option value='918.0'>i20</option>
+                    <option value='928.0'>Leon</option>
+                    <option value='410.0'>Rav4</option>
+                    <option value='131.0'>X2</option>
+                    <option value='1241.0'>CMax</option>
+                    <option value='497.0'>Grand C4 Picasso</option>
+                    <option value='594.0'>A5</option>
+                    <option value='611.0'>Serie 2</option>
+                    <option value='1092.0'>X1</option>
+                    <option value='944.0'>X6</option>
+                    <option value='880.0'>Ibiza</option>
+                    <option value='2.0'>A1</option>
+                    <option value='966.0'>Montero</option>
+                    <option value='72.0'>Talisman</option>
+                    <option value='1165.0'>Clase CLA</option>
+                    <option value='1057.0'>Serie 6</option>
+                    <option value='514.0'>Laguna</option>
+                    <option value='916.0'>Serie 2 Active Tourer</option>
+                    <option value='54.0'>CElysee</option>
+                    <option value='1158.0'>Corsa</option>
+                    <option value='1047.0'>Captur</option>
+                    <option value='77.0'>Polo</option>
+                    <option value='1069.0'>Auris</option>
+                    <option value='109.0'>CHR</option>
+                    <option value='273.0'>C5</option>
+                    <option value='1211.0'>Range Rover Evoque</option>
+                    <option value='427.0'>RX</option>
+                    <option value='994.0'>A4</option>
+                    <option value='930.0'>Kona</option>
+                    <option value='7.0'>Clase CL</option>
+                    <option value='1239.0'>EcoSport</option>
+                    <option value='57.0'>Golf</option>
+                    <option value='1063.0'>forfour</option>
+                    <option value='89.0'>Discovery</option>
+                    <option value='524.0'>Levante</option>
+                    <option value='232.0'>Serie 8</option>
+                    <option value='1181.0'>QASHQAI</option>
+                    <option value='178.0'>A7</option>
+                    <option value='606.0'>Clase B</option>
+                    <option value='974.0'>Clase GLE</option>
+                    <option value='566.0'>Fpace</option>
+                    <option value='1154.0'>Clase A</option>
+                    <option value='1166.0'>DS 3</option>
+                    <option value='275.0'>Niro</option>
+                    <option value='1149.0'>C3 Aircross</option>
+                    <option value='1197.0'>S90</option>
+                    <option value='1224.0'>Q5</option>
+                    <option value='181.0'>MX5</option>
+                    <option value='904.0'>Discovery Sport</option>
+                    <option value='237.0'>Passat</option>
+                    <option value='1134.0'>A6</option>
+                    <option value='83.0'>Clase E</option>
+                    <option value='27.0'>Fiesta</option>
+                    <option value='41.0'>TUCSON</option>
+                    <option value='86.0'>CLUBMAN</option>
+                    <option value='529.0'>CRV</option>
+                    <option value='1167.0'>Clase CLS</option>
+                    <option value='354.0'>Focus</option>
+                    <option value='542.0'>fortwo</option>
+                    <option value='38.0'>X5</option>
+                    <option value='318.0'>Stelvio</option>
+                    <option value='438.0'>Range Rover Sport</option>
+                    <option value='1217.0'>DS 7 Crossback ETense</option>
+                    <option value='546.0'>Micra</option>
+                    <option value='1290.0'>Astra</option>
+                    <option value='34.0'>MiTo</option>
+                    <option value='67.0'>Model S</option>
+                    <option value='907.0'>C5 Aircross Hybrid</option>
+                    <option value='1171.0'>A3</option>
+                    <option value='1314.0'>Zoe</option>
+                    <option value='345.0'>Range Rover</option>
+                    <option value='1071.0'>Renegade</option>
+                    <option value='115.0'>Mokka X</option>
+                    <option value='1131.0'>Accord</option>
+                    <option value='1198.0'>Kadjar</option>
+                    <option value='93.0'>508</option>
+                    <option value='1153.0'>ASX</option>
+                    <option value='982.0'>Tourneo Courier</option>
+                    <option value='965.0'>Stonic</option>
+                    <option value='1127.0'>Aygo</option>
+                    <option value='1229.0'>Mokka</option>
+                    <option value='555.0'>Fabia</option>
+                    <option value='1036.0'>Tipo</option>
+                    <option value='411.0'>Crossland X</option>
+                    <option value='164.0'>Karoq</option>
+                    <option value='1219.0'>Berlingo</option>
+                    <option value='1230.0'>XC90</option>
+                    <option value='678.0'>2008</option>
+                    <option value='486.0'>Clase GLK</option>
+                    <option value='1077.0'>NX</option>
+                    <option value='905.0'>Macan</option>
+                    <option value='1125.0'>Cayman</option>
+                    <option value='1097.0'>C1</option>
+                    <option value='573.0'>Optima</option>
+                    <option value='556.0'>Serie 2 Gran Tourer</option>
+                    <option value='1019.0'>CX5</option>
+                    <option value='1159.0'>Clase GLA</option>
+                    <option value='1016.0'>Serie 5</option>
+                    <option value='1100.0'>A6 allroad quattro</option>
+                    <option value='71.0'>Boxster</option>
+                    <option value='1023.0'>C4</option>
+                    <option value='290.0'>Zafira</option>
+                    <option value='353.0'>XLV</option>
+                    <option value='385.0'>V60</option>
+                    <option value='1193.0'>i40</option>
+                    <option value='977.0'>Scirocco</option>
+                    <option value='1000.0'>911</option>
+                    <option value='799.0'>Duster</option>
+                    <option value='73.0'>TRoc</option>
+                    <option value='962.0'>Kodiaq</option>
+                    <option value='1232.0'>i30</option>
+                    <option value='1212.0'>SMAX</option>
+                    <option value='622.0'>XC60</option>
+                    <option value='590.0'>Freelander</option>
+                    <option value='900.0'>Clase GLC</option>
+                    <option value='313.0'>Q2</option>
+                    <option value='1162.0'>Alhambra</option>
+                    <option value='1199.0'>Pro Ceed</option>
+                    <option value='341.0'>Cruze</option>
+                    <option value='631.0'>IONIQ</option>
+                    <option value='932.0'>500L</option>
+                    <option value='1202.0'>Carens</option>
+                    <option value='1038.0'>V90 Cross Country</option>
+                    <option value='439.0'>Ghibli</option>
+                    <option value='1204.0'>Grand CMax</option>
+                    <option value='336.0'>Jazz</option>
+                    <option value='972.0'>Clase GLS</option>
+                    <option value='456.0'>XF</option>
+                    <option value='1173.0'>TT</option>
+                    <option value='407.0'>Hilux</option>
+                    <option value='360.0'>Patriot</option>
+                    <option value='599.0'>A8</option>
+                    <option value='617.0'>XE</option>
+                    <option value='105.0'>Scenic</option>
+                    <option value='1139.0'>Logan</option>
+                    <option value='270.0'>Corolla</option>
+                    <option value='575.0'>LC</option>
+                    <option value='272.0'>Grand Cherokee</option>
+                    <option value='1203.0'>X4</option>
+                    <option value='218.0'>Rio</option>
+                    <option value='1119.0'>Clase G</option>
+                    <option value='442.0'>RC</option>
+                    <option value='167.0'>Clase M</option>
+                    <option value='1126.0'>DS 3 Crossback</option>
+                    <option value='309.0'>CX3</option>
+                    <option value='1263.0'>DS 7 Crossback</option>
+                    <option value='1140.0'>CT</option>
+                    <option value='1223.0'>i10</option>
+                    <option value='985.0'>Partner</option>
+                    <option value='885.0'>Insight</option>
+                    <option value='681.0'>HR-V</option>
+                    <option value='924.0'>Civic</option>
+                    <option value='97.0'>CR-V</option>
+                    <option value='961.0'>ix35</option>
+                    <option value='1189.0'>i20 Active</option>
+                    <option value='51.0'>Sonata</option>
+                    <option value='425.0'>Santa Fe</option>
+                    <option value='980.0'>ix20</option>
+                    <option value='1003.0'>Veloster</option>
+                    <option value='986.0'>Genesis</option>
+                    <option value='1226.0'>E-Pace</option>
+                    <option value='1246.0'>EPace</option>
+                    <option value='113.0'>iPace</option>
+                    <option value='1058.0'>XJ</option>
+                    <option value='138.0'>FType</option>
+                    <option value='603.0'>Wrangler</option>
+                    <option value='614.0'>Compass</option>
+                    <option value='148.0'>Wrangler Unlimited</option>
+                    <option value='139.0'>Cherokee</option>
+                    <option value='1287.0'>Sportage</option>
+                    <option value='919.0'>eSoul</option>
+                    <option value='607.0'>Soul</option>
+                    <option value='1208.0'>ceed</option>
+                    <option value='1266.0'>Optima SW</option>
+                    <option value='1041.0'>eNiro</option>
+                    <option value='1237.0'>ceed Sportswagon</option>
+                    <option value='535.0'>Stinger</option>
+                    <option value='1294.0'>Picanto</option>
+                    <option value='489.0'>XCeed</option>
+                    <option value='1317.0'>Sorento</option>
+                    <option value='1028.0'>ProCeed</option>
+                    <option value='903.0'>Lodgy</option>
+                    <option value='75.0'>Sandero</option>
+                    <option value='163.0'>Punto</option>
+                    <option value='963.0'>Panda</option>
+                    <option value='694.0'>500C</option>
+                    <option value='276.0'>Doblo</option>
+                    <option value='1192.0'>Bravo</option>
+                    <option value='365.0'>Kaplus</option>
+                    <option value='1033.0'>Puma</option>
+                    <option value='289.0'>BMAX</option>
+                    <option value='1136.0'>KA</option>
+                    <option value='283.0'>Grand Tourneo Connect</option>
+                    <option value='1174.0'>Galaxy</option>
+                    <option value='596.0'>Edge</option>
+                    <option value='1051.0'>Antara</option>
+                    <option value='1012.0'>Adam</option>
+                    <option value='1163.0'>Zafira Tourer</option>
+                    <option value='1289.0'>GTC</option>
+                    <option value='1160.0'>Corsae</option>
+                    <option value='1281.0'>Karl</option>
+                    <option value='1026.0'>Zafira Life</option>
+                    <option value='506.0'>Ampera</option>
+                    <option value='1292.0'>Meriva</option>
+                    <option value='1253.0'>Grandland X PHEV</option>
+                    <option value='659.0'>Combo Life</option>
+                    <option value='351.0'>Combo</option>
+                    <option value='457.0'>Octavia Tour</option>
+                    <option value='1278.0'>Superb</option>
+                    <option value='1296.0'>Scala</option>
+                    <option value='1093.0'>Kamiq</option>
+                    <option value='657.0'>Spaceback</option>
+                    <option value='177.0'>Pickup</option>
+                    <option value='1031.0'>Serie 7</option>
+                    <option value='619.0'>C4 Aircross</option>
+                    <option value='1015.0'>C4 Picasso</option>
+                    <option value='1247.0'>DS5</option>
+                    <option value='1331.0'>C4 Spacetourer</option>
+                    <option value='1248.0'>eC4</option>
+                    <option value='413.0'>Grand C4 Spacetourer</option>
+                    <option value='957.0'>Xsara Picasso</option>
+                    <option value='1215.0'>DS3</option>
+                    <option value='1194.0'>MercedesAMG GT</option>
+                    <option value='1155.0'>GLC Coupe</option>
+                    <option value='1261.0'>Clase GLE Coupe</option>
+                    <option value='1098.0'>GLE</option>
+                    <option value='258.0'>GLA</option>
+                    <option value='259.0'>Clase SLK</option>
+                    <option value='56.0'>Clase V</option>
+                    <option value='1299.0'>Clase S</option>
+                    <option value='1322.0'>CLA</option>
+                    <option value='509.0'>GLE COUPE 400</option>
+                    <option value='376.0'>E 200 4MATIC 197CV</option>
+                    <option value='658.0'>EQV</option>
+                    <option value='1242.0'>Outlander</option>
+                    <option value='1251.0'>Space Star</option>
+                    <option value='883.0'>L200</option>
+                    <option value='1256.0'>Eclipse Cross</option>
+                    <option value='746.0'>ES</option>
+                    <option value='741.0'>IS</option>
+                    <option value='1052.0'>UX</option>
+                    <option value='503.0'>GS</option>
+                    <option value='1277.0'>LS</option>
+                    <option value='1297.0'>Paceman</option>
+                    <option value='1177.0'>Cayenne</option>
+                    <option value="1">Cayenne Coupe</option>
+                    <option value="1354">Taycan</option>
+                    <option value="21">718</option>
+                </select>
+
+                <p>Tipo de transmision</p>
+                <select name="transmissionType">
+                    <option value="2.0">Manual</option>
+                    <option value="1.0">Automática</option>
+                </select>
+
+                <p>Año</p>
+                <input type="Text" name="year">
+
+                <p>CC</p>
+                <input type="number" name="cubicCapacity">
+
+                <p>Puertas</p>
+                <input type="number" name="doors">
+
+                <p>Caballos</p>
+                <input type="number" name="hp">
+
+                <br><br>
+                <input type="submit" value="enviar">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
