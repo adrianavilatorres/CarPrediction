@@ -97,3 +97,8 @@ def respuesta(request):
     """% (primerPrecio, segundoPrecio, tercerPrecio, cuartoPrecio)
     
     return HttpResponse(documento)
+
+
+
+def index(request):
+    return render(request, "formulario.html")

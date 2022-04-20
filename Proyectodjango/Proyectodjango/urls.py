@@ -17,10 +17,10 @@ from django import views
 from django.contrib import admin
 from django.urls import path
 
-from Proyectodjango.views import formulario, respuesta
+from Proyectodjango.views import formulario, respuesta, index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', index),
     path('formulario/', formulario),
     path('respuesta/', respuesta),
 ]
