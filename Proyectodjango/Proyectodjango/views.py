@@ -39,6 +39,61 @@ def respuesta(request):
     
     respuesta = 'Prediccion con el primer modelo: {}, prediccion con el segundo modelo: {}, prediccion con el tercer modelo: {}, prediccion con el cuarto modelo: {}'.format(primerPrecio, segundoPrecio, tercerPrecio, cuartoPrecio)
     
+    documento = """ 
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Respuesta</title>
+
+            <style>
+                body {
+                    background-image: url("car.jpg");
+                }
+                
+                .contenedor {
+                    text-align: center;
+                }
+                
+                .formulario {
+                    background-color: #cccccc;
+                    padding: 10px;
+                    margin: 10px;
+                    /* IMPORTANTE */
+                    display: inline-block;
+                    border-radius: 15px;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="contenedor">
+                <div class="formulario">
+                    <h1>Resultado de las predicciones</h1>
+                    
+                    <hr style="border-color:black;">
+                    
+                    
+                    <h3>Predicción 1</h3>
+                    <p>%s</p>
+
+                    <h3>Predicción 2</h3>
+                    <p>%s</p>
+
+                    <h3>Predicción 3</h3>
+                    <p>%s</p>
+
+                    <h3>Predicción 4</h3>
+                    <p>%s</p>
+                    
+                </div>
+            </div>
+        </body>
+
+        </html>
     
+    """% (primerPrecio, segundoPrecio, tercerPrecio, cuartoPrecio)
     
-    return HttpResponse(respuesta)
+    return HttpResponse(documento)
